@@ -69,32 +69,43 @@
                                     </table>
 
                                 </div>
+                                <!-- PHÂN TRANG ĐƠN HÀNG (ORDER PAGINATION) -->
                                 <nav aria-label="Page navigation example">
                                     <ul class="pagination justify-content-center">
+
+                                        <!-- Nút PREVIOUS -->
                                         <li class="page-item">
-                                            <a class="${1  eq currentOrder ?'disabled page-link' : 'page-link'}"
-                                                href="/admin/order?page=${currentOrder -1 }" aria-label="Previous">
+                                            <a class="${currentOrder <= 1 ? 'disabled page-link' : 'page-link'}"
+                                                href="/admin/order?page=${currentOrder <= 1 ? 1 : currentOrder - 1}"
+                                                aria-label="Previous">
                                                 <span aria-hidden="true">&laquo;</span>
                                             </a>
                                         </li>
-                                        <c:forEach begin="0" end="${totalOrder -1 }" varStatus="loop">
-                                            <li class="page-item">
-                                                <a class="${(loop.index + 1) eq currentOrder ? 'active page-link ' : 'page-link'}"
-                                                    href="/admin/order?page=${loop.index + 1}">
-                                                    ${loop.index + 1}
-                                                    <!--Cộng 1 bởi vì chỉ số của mảng bắt đầu từ 0 cho nên cộng vào -->
-                                                </a>
-                                            </li>
-                                        </c:forEach>
 
+                                        <!-- Vòng lặp số trang, chỉ chạy khi totalOrder > 0 -->
+                                        <c:if test="${totalOrder > 0}">
+                                            <c:forEach begin="0" end="${totalOrder - 1}" varStatus="loop">
+                                                <li class="page-item">
+                                                    <a class="${(loop.index + 1) eq currentOrder ? 'active page-link' : 'page-link'}"
+                                                        href="/admin/order?page=${loop.index + 1}">
+                                                        ${loop.index + 1}
+                                                    </a>
+                                                </li>
+                                            </c:forEach>
+                                        </c:if>
+
+                                        <!-- Nút NEXT -->
                                         <li class="page-item">
-                                            <a class="${totalOrder eq currentOrder ?'disabled page-link' : 'page-link'}"
-                                                href="/admin/order?page=${currentOrder + 1 }" aria-label="Next">
+                                            <a class="${currentOrder >= totalOrder ? 'disabled page-link' : 'page-link'}"
+                                                href="/admin/order?page=${currentOrder >= totalOrder ? totalOrder : currentOrder + 1}"
+                                                aria-label="Next">
                                                 <span aria-hidden="true">&raquo;</span>
                                             </a>
                                         </li>
+
                                     </ul>
                                 </nav>
+
                             </main>
                             <jsp:include page="../layout/footer.jsp" />
                         </div>

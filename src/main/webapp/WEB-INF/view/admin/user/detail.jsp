@@ -36,15 +36,16 @@
                                     <div class="row">
                                         <div class="col-10 mx-auto">
                                             <div class="d-flex justify-content-between">
-                                                <h3>User Details</h3>
+                                                <h3>User Information</h3>
                                             </div>
 
                                             <hr>
 
                                             <div class="card" style="width: 60%">
-                                                <div class="card-header">
-                                                    User infomation
-                                                </div>
+                                                <img class="card-img-top" src="/images/avatar/${user.avatar}"
+                                                    alt="Card image cap"
+                                                    style="width: 200px; height: 200px; margin:0 auto;">
+
                                                 <ul class="list-group list-group-flush">
                                                     <li class="list-group-item">ID : ${user.id}</li>
                                                     <li class="list-group-item">Email : ${user.email}</li>

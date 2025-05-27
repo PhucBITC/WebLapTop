@@ -54,7 +54,7 @@
 
                                             </div>
                                             <form:form method="post" action="/admin/user/update"
-                                                modelAttribute="newUser">
+                                                modelAttribute="newUser" enctype="multipart/form-data">
                                                 <div class="mb-3" style="display: none;">
                                                     <lable class="form-lable">ID:</lable>
                                                     <form:input type="text" class="form-control" path="id" />

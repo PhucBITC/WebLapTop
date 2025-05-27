@@ -58,7 +58,7 @@ public class UserController {
             // TODO: handle exception
         }
 
-        Pageable pageable = PageRequest.of(page - 1, 1);
+        Pageable pageable = PageRequest.of(page - 1, 5);
         Page<User> usersPage = this.userSevice.getAllUser(pageable);
         List<User> users = usersPage.getContent();
         model.addAttribute("user1", users);
@@ -119,10 +119,16 @@ public class UserController {
     // hiện tại thì bạn sử dụng cái này hay sử dụng @PostMapping vẫn được , nhưng
     // dùng reqestmaping ok hơn nhiều
     @PostMapping("/admin/user/update")
-    public String postUpdateUser(Model model, @ModelAttribute("newUser") User phucxo) {
+    public String postUpdateUser(Model model, @ModelAttribute("newUser") User phucxo,
+            @RequestParam("phucvietFile") MultipartFile file) {
         User cureentUser = this.userSevice.getUserById(phucxo.getId());
 
         if (cureentUser != null) {
+            // update new image
+            if (!file.isEmpty()) {
+                String img = this.uploadService.handleSaveUploadFile(file, "avatar");
+                cureentUser.setAvatar(img);
+            }
             cureentUser.setAddress(phucxo.getAddress());
             cureentUser.setFullName(phucxo.getFullName());
             cureentUser.setPhone(phucxo.getPhone());
