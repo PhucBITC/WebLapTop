@@ -1,0 +1,97 @@
+/* General Styles */
+body {
+    transition: margin-left .5s;
+}
+
+/* Header Styles */
+.sb-topnav {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.sb-topnav .navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.sb-topnav .navbar-brand:hover {
+    color: #fff;
+}
+
+.sb-topnav .nav-link {
+    transition: all 0.3s ease-in-out;
+}
+
+.sb-topnav .nav-link:hover {
+    color: #fff;
+}
+
+.dropdown-menu {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Sidebar Styles */
+.sb-sidenav {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.sb-sidenav .nav-link {
+    transition: all 0.2s ease-in-out;
+    border-left: 0px solid #007bff;
+}
+
+.sb-sidenav .nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-left: 4px solid #007bff;
+    padding-left: calc(0.75rem + 4px);
+}
+
+.sb-sidenav .nav-link .sb-nav-link-icon {
+    transition: all 0.2s ease-in-out;
+}
+
+.sb-sidenav .nav-link:hover .sb-nav-link-icon {
+    transform: scale(1.1);
+}
+
+.sb-sidenav-footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 1rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.sb-sidenav-footer:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #343a40;
+    color: #fff;
+    padding: 20px 0;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.footer a {
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.footer a:hover {
+    color: #007bff;
+}

@@ -30,6 +30,7 @@
 
                 <!-- Template Stylesheet -->
                 <link href="/client/css/style.css" rel="stylesheet">
+                <link href="/client/css/custom.css" rel="stylesheet">
 
             </head>
 

@@ -4,6 +4,8 @@ import java.util.List;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Service;
 
 import vn.vietphuc.laptopshop.domain.User;
@@ -31,6 +33,22 @@ public class UserSevice {
         this.productRepository = productRepository;
         this.orderRepository = orderRepository;
     }
+
+    public String getCurrentUserEmail() {
+        Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        String email = null;
+        if (principal instanceof UserDetails) {
+            email = ((UserDetails) principal).getUsername();
+        } else {
+            email = principal.toString();
+        }
+        // anonymousUser
+        if ("anonymousUser".equals(email)) {
+            return null;
+        }
+        return email;
+    }
+
 
     public String handleHello() {
         return "Truyen data tu controll qua thang view";
