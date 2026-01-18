@@ -200,23 +200,23 @@
                                             <div class="col-md-4">
                                                 <label class="form-label">Hãng sản xuất</label>
                                                 <form:select class="form-select" path="factory">
-                                                    <form:option value="Apple(Macbook)">Apple (Macbook)</form:option>
-                                                    <form:option value="Asus">Asus</form:option>
-                                                    <form:option value="Lenovo">Lenovo</form:option>
-                                                    <form:option value="Dell">Dell</form:option>
-                                                    <form:option value="LG">LG</form:option>
-                                                    <form:option value="Acer">Acer</form:option>
+                                                    <form:option  style="background-color:#2B2C39;" value="Apple(Macbook)">Apple (Macbook)</form:option>
+                                                    <form:option  style="background-color:#2B2C39;" value="Asus">Asus</form:option>
+                                                    <form:option  style="background-color:#2B2C39;" value="Lenovo">Lenovo</form:option>
+                                                    <form:option  style="background-color:#2B2C39;" value="Dell">Dell</form:option>
+                                                    <form:option  style="background-color:#2B2C39;" value="LG">LG</form:option>
+                                                    <form:option  style="background-color:#2B2C39;" value="Acer">Acer</form:option>
                                                 </form:select>
                                             </div>
 
                                             <div class="col-md-4">
                                                 <label class="form-label">Phân loại (Target)</label>
                                                 <form:select class="form-select" path="target">
-                                                    <form:option value="Gamming">Gaming</form:option>
-                                                    <form:option value="Sinh viên - văn phòng">Sinh viên - Văn phòng</form:option>
-                                                    <form:option value="Thiết kế đồ họa">Thiết kế đồ họa</form:option>
-                                                    <form:option value="Mỏng nhẹ">Mỏng nhẹ</form:option>
-                                                    <form:option value="Doanh nhân">Doanh nhân</form:option>
+                                                    <form:option style="background-color:#2B2C39;" value="Gamming">Gaming</form:option>
+                                                    <form:option style="background-color:#2B2C39;" value="Sinh viên - văn phòng">Sinh viên - Văn phòng</form:option>
+                                                    <form:option style="background-color:#2B2C39;" value="Thiết kế đồ họa">Thiết kế đồ họa</form:option>
+                                                    <form:option style="background-color:#2B2C39;" value="Mỏng nhẹ">Mỏng nhẹ</form:option>
+                                                    <form:option style="background-color:#2B2C39;" value="Doanh nhân">Doanh nhân</form:option>
                                                 </form:select>
                                             </div>
                                         </div>

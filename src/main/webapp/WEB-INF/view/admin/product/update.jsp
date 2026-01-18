@@ -245,26 +245,26 @@
                                                             <div class="col-md-4">
                                                                 <label class="form-label">Hãng</label>
                                                                 <form:select class="form-select" path="factory">
-                                                                    <form:option value="APPLE">Apple (MacBook)
+                                                                    <form:option  style="background-color:#2B2C39;" value="APPLE">Apple (MacBook)
                                                                     </form:option>
-                                                                    <form:option value="ASUS">Asus</form:option>
-                                                                    <form:option value="LENOVO">Lenovo</form:option>
-                                                                    <form:option value="DELL">Dell</form:option>
-                                                                    <form:option value="LG">LG</form:option>
-                                                                    <form:option value="ACER">Acer</form:option>
+                                                                    <form:option  style="background-color:#2B2C39;" value="ASUS">Asus</form:option>
+                                                                    <form:option  style="background-color:#2B2C39;" value="LENOVO">Lenovo</form:option>
+                                                                    <form:option  style="background-color:#2B2C39;" value="DELL">Dell</form:option>
+                                                                    <form:option  style="background-color:#2B2C39;" value="LG">LG</form:option>
+                                                                    <form:option  style="background-color:#2B2C39;" value="ACER">Acer</form:option>
                                                                 </form:select>
                                                             </div>
 
                                                             <div class="col-md-4">
                                                                 <label class="form-label">Phân khúc</label>
                                                                 <form:select class="form-select" path="target">
-                                                                    <form:option value="GAMING">Gaming</form:option>
-                                                                    <form:option value="SINHVIEN-VANPHONG">Sinh viên -
+                                                                    <form:option  style="background-color:#2B2C39;" value="GAMING">Gaming</form:option>
+                                                                    <form:option  style="background-color:#2B2C39;" value="SINHVIEN-VANPHONG">Sinh viên -
                                                                         Văn phòng</form:option>
-                                                                    <form:option value="THIET-KE-DO-HOA">Thiết kế đồ họa
+                                                                    <form:option  style="background-color:#2B2C39;" value="THIET-KE-DO-HOA">Thiết kế đồ họa
                                                                     </form:option>
-                                                                    <form:option value="MONG-NHE">Mỏng nhẹ</form:option>
-                                                                    <form:option value="DOANH-NHAN">Doanh nhân
+                                                                    <form:option  style="background-color:#2B2C39;" value="MONG-NHE">Mỏng nhẹ</form:option>
+                                                                    <form:option  style="background-color:#2B2C39;" value="DOANH-NHAN">Doanh nhân
                                                                     </form:option>
                                                                 </form:select>
                                                             </div>

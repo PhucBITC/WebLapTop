@@ -128,7 +128,7 @@
                     <ol class="breadcrumb mb-4">
                         <li class="breadcrumb-item"><a href="/admin">Dashboard</a></li>
                         <li class="breadcrumb-item"><a href="/admin/order">Đơn hàng</a></li>
-                        <li class="breadcrumb-item active">Mã đơn #${id}</li>
+                        <li class="breadcrumb-item active">Mã đơn ${id}</li>
                     </ol>
 
                     <div class="detail-container">
@@ -138,7 +138,7 @@
                                 Danh sách sản phẩm mua
                             </h3>
                             <span class="badge bg-dark border border-secondary p-2 px-3" style="border-radius: 10px;">
-                                Đơn hàng ID: #${id}
+                                Đơn hàng ID: ${id}
                             </span>
                         </div>
 

@@ -229,8 +229,8 @@
                                                 <div class="col-md-4">
                                                     <label class="form-label">System Role</label>
                                                     <form:select class="form-select" path="role.name">
-                                                        <form:option value="ADMIN">ADMIN (Quản trị viên)</form:option>
-                                                        <form:option value="USER">USER (Khách hàng)</form:option>
+                                                        <form:option style="background-color:#2B2C39;" value="ADMIN">ADMIN (Quản trị viên)</form:option>
+                                                        <form:option style="background-color:#2B2C39;" value="USER">USER (Khách hàng)</form:option>
                                                     </form:select>
                                                 </div>
 
