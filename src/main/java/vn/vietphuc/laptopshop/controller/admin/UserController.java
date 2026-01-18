@@ -155,6 +155,59 @@ public class UserController {
         return "redirect:/admin/user";
     }
 
+    @GetMapping("/admin/profile")
+    public String getProfilePage(Model model) {
+        String email = this.userSevice.getCurrentUserEmail();
+        User currentUser = this.userSevice.getUserByEmail(email);
+        model.addAttribute("newUser", currentUser);
+        return "admin/user/profile";
+    }
+
+    @PostMapping("/admin/profile")
+    public String postUpdateProfile(Model model, @ModelAttribute("newUser") User phucxo,
+            @RequestParam("phucvietFile") MultipartFile file) {
+        User currentUser = this.userSevice.getUserById(phucxo.getId());
+        if (currentUser != null) {
+            if (!file.isEmpty()) {
+                String img = this.uploadService.handleSaveUploadFile(file, "avatar");
+                currentUser.setAvatar(img);
+            }
+            currentUser.setAddress(phucxo.getAddress());
+            currentUser.setFullName(phucxo.getFullName());
+            currentUser.setPhone(phucxo.getPhone());
+            this.userSevice.handlSaveUser(currentUser);
+        }
+        return "redirect:/admin/profile";
+    }
+
+    @GetMapping("/admin/settings")
+    public String getSettingsPage(Model model) {
+        return "admin/user/settings";
+    }
+
+    @PostMapping("/admin/settings")
+    public String postChangePassword(Model model,
+            @RequestParam("currentPassword") String currentPassword,
+            @RequestParam("newPassword") String newPassword,
+            @RequestParam("confirmPassword") String confirmPassword) {
+        String email = this.userSevice.getCurrentUserEmail();
+        User currentUser = this.userSevice.getUserByEmail(email);
+
+        if (this.passwordEncoder.matches(currentPassword, currentUser.getPassword())) {
+            if (newPassword.equals(confirmPassword)) {
+                String hashPassword = this.passwordEncoder.encode(newPassword);
+                currentUser.setPassword(hashPassword);
+                this.userSevice.handlSaveUser(currentUser);
+                model.addAttribute("success", "Đổi mật khẩu thành công!");
+            } else {
+                model.addAttribute("error", "Mật khẩu mới và xác nhận mật khẩu không khớp!");
+            }
+        } else {
+            model.addAttribute("error", "Mật khẩu hiện tại không chính xác!");
+        }
+        return "admin/user/settings";
+    }
+
     @GetMapping("/phucxo")
     public String getPhucXo() {
         return "Xin chao phuc xo";

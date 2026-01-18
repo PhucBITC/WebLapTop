@@ -169,7 +169,7 @@
                     <ol class="breadcrumb mb-4">
                         <li class="breadcrumb-item"><a href="/admin">Dashboard</a></li>
                         <li class="breadcrumb-item"><a href="/admin/user">Người dùng</a></li>
-                        <li class="breadcrumb-item active">Chi tiết #${user.id}</li>
+                        <li class="breadcrumb-item active">Chi tiết ${user.id}</li>
                     </ol>
 
                     <div class="profile-container mb-5">
@@ -179,7 +179,7 @@
                                 <div class="status-indicator"></div>
                             </div>
                             <h2 style="font-weight: 800; letter-spacing: -1px;">${user.fullName}</h2>
-                            <p class="text-muted mb-4">Mã định danh: #${user.id}</p>
+                            <p class="text-muted mb-4">Mã định danh: ${user.id}</p>
                         </div>
 
                         <hr style="border-color: rgba(255,255,255,0.05);">
