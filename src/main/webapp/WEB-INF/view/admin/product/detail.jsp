@@ -196,7 +196,7 @@
                             <div class="col-lg-7">
                                 <div class="d-flex align-items-center mb-2">
                                     <span class="text-muted">Mã sản phẩm:</span>
-                                    <span class="badge-id">#${product.id}</span>
+                                    <span class="badge-id">${product.id}</span>
                                 </div>
                                 <h2 class="product-title">${product.name}</h2>
                                 

@@ -169,7 +169,7 @@
                                     <ol class="breadcrumb mb-4">
                                         <li class="breadcrumb-item"><a href="/admin">Dashboard</a></li>
                                         <li class="breadcrumb-item"><a href="/admin/product">Sản phẩm</a></li>
-                                        <li class="breadcrumb-item active">Cập nhật #${newProduct.id}</li>
+                                        <li class="breadcrumb-item active">Cập nhật ${newProduct.id}</li>
                                     </ol>
 
                                     <div class="row justify-content-center">
