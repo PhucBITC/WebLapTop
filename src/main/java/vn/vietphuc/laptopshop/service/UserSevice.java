@@ -49,7 +49,6 @@ public class UserSevice {
         return email;
     }
 
-
     public String handleHello() {
         return "Truyen data tu controll qua thang view";
     }
@@ -94,6 +93,10 @@ public class UserSevice {
 
     public User getUserByEmail(String email) {
         return this.userRepository.findByEmail(email);
+    }
+
+    public User getUserByResetPasswordToken(String token) {
+        return this.userRepository.findByResetPasswordToken(token);
     }
 
     // Đếm số lượng count trong mỗi thành phần

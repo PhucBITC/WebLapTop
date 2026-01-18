@@ -182,6 +182,12 @@
                                     </div>
                                 </c:if>
 
+                                <c:if test="${param.resetSuccess != null}">
+                                    <div class="alert alert-success custom-alert mb-3" style="background-color: var(--soft-blue); color: var(--primary-blue);">
+                                        <i class="fa-solid fa-circle-check me-2"></i> Đổi mật khẩu thành công. Vui lòng đăng nhập lại.
+                                    </div>
+                                </c:if>
+
                                 <div class="mb-3">
                                     <label class="form-label">Email</label>
                                     <input class="form-control" type="email" placeholder="name@example.com"
@@ -197,7 +203,8 @@
                                         required />
 
                                     <div class="text-end">
-                                        <a href="#" class="text-decoration-none small text-primary fw-500">
+                                        <a href="/forgot-password"
+                                            class="text-decoration-none small text-primary fw-500">
                                             Quên mật khẩu?
                                         </a>
                                     </div>

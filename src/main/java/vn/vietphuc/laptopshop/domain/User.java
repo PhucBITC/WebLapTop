@@ -53,6 +53,8 @@ public class User {
 
     private String avatar;
 
+    private String resetPasswordToken;
+
     // role id
     // user many --> to one --> role
 
@@ -148,6 +150,14 @@ public class User {
 
     public void setCart(Cart cart) {
         this.cart = cart;
+    }
+
+    public String getResetPasswordToken() {
+        return resetPasswordToken;
+    }
+
+    public void setResetPasswordToken(String resetPasswordToken) {
+        this.resetPasswordToken = resetPasswordToken;
     }
 
     @Override
