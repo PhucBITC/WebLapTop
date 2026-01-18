@@ -43,9 +43,14 @@
                                             </div>
                                         </li>
 
+                                         <c:if test="${pageContext.request.isUserInRole('ADMIN')}">
+                                            <li><a class="dropdown-item" href="/admin">Quản trị hệ thống</a></li>
+                                        </c:if>
+
                                         <li><a class="dropdown-item" href="/user/profile">Quản lý tài khoản</a></li>
 
                                         <li><a class="dropdown-item" href="/order-history">Lịch sử mua hàng</a></li>
+                                       
                                         <li>
                                             <hr class="dropdown-divider">
                                         </li>

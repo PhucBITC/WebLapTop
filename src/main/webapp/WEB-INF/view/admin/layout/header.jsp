@@ -126,10 +126,13 @@
                         <i class="fas fa-user-circle fa-lg"></i>
                     </a>
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="/"><i class="fas fa-home me-2"></i>Trang chủ</a></li>
+                         <li><a class="dropdown-item" href="/admin/profile"><i class="fas fa-id-card me-2"></i>Hồ sơ cá
+                                nhân</a></li>
                         <li><a class="dropdown-item" href="/admin/settings"><i class="fas fa-cog me-2"></i>Cài đặt</a>
                         </li>
-                        <li><a class="dropdown-item" href="/admin/profile"><i class="fas fa-id-card me-2"></i>Hồ sơ cá
-                                nhân</a></li>
+                       
+                        
                         <li>
                             <hr class="dropdown-divider" />
                         </li>
