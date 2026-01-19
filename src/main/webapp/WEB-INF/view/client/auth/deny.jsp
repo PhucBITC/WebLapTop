@@ -13,6 +13,8 @@
                 <title>Login - Laptopshop</title>
                 <link href="/css/styles.css" rel="stylesheet" />
                 <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+                <jsp:include page="/WEB-INF/view/client/layout/favicon.jsp" />
+
             </head>
             <style>
                 .hienThi {

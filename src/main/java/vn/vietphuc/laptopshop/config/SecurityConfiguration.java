@@ -66,7 +66,7 @@ public class SecurityConfiguration {
                         .permitAll()
 
                         .requestMatchers("/", "/login", "/product/**", "/register",
-                                "/client/**", "/css/**", "/js/**", "/images/**")
+                                "/client/**", "/css/**", "/js/**", "/images/**", "/error")
                         .permitAll()
                         .requestMatchers("/forgot-password", "/reset-password").permitAll()
 

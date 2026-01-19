@@ -33,6 +33,8 @@
 
     <!-- Template Stylesheet -->
     <link href="/client/css/style.css" rel="stylesheet">
+    <jsp:include page="/WEB-INF/view/client/layout/favicon.jsp" />
+
 </head>
 
 <body>
