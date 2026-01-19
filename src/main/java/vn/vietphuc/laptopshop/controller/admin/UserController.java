@@ -132,7 +132,11 @@ public class UserController {
             cureentUser.setAddress(phucxo.getAddress());
             cureentUser.setFullName(phucxo.getFullName());
             cureentUser.setPhone(phucxo.getPhone());
-            cureentUser.setRole(this.userSevice.getRoleByName(phucxo.getRole().getName()));
+             cureentUser.setEmail(phucxo.getEmail());
+
+            if (phucxo.getRole() != null) {
+                cureentUser.setRole(this.userSevice.getRoleByName(phucxo.getRole().getName()));
+            }
             this.userSevice.handlSaveUser(cureentUser); // Hàm này là hàm để có thể lưu xuống database
         }
         return "redirect:/admin/user";
