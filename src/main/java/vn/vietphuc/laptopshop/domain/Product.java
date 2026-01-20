@@ -28,9 +28,9 @@ public class Product {
     @NotEmpty(message = "Tên sản phẩm không được để trống ")
     private String name;
 
-    @NotNull
+    @NotNull(message = "Giá thành không được để trống")
     @DecimalMin(value = "0", inclusive = false, message = "Price phải lớn hơn 0 ")
-    private double price;
+    private Double price;
     private String image;
 
     @NotNull
@@ -42,9 +42,9 @@ public class Product {
     @NotEmpty(message = "ShortDesc không được để trống")
     private String shortDesc;
 
-    @NotNull
+    @NotNull(message = "Số lượng không được để trống")
     @Min(value = 1, message = "Quantity phải lớn hơn hoặc bằng 1  ")
-    private long quantity;
+    private Long quantity;
     private long sold;
     private String factory;
     private String target;
@@ -57,11 +57,11 @@ public class Product {
         this.name = name;
     }
 
-    public double getPrice() {
+    public Double getPrice() {
         return price;
     }
 
-    public void setPrice(double price) {
+    public void setPrice(Double price) {
         this.price = price;
     }
 
@@ -89,11 +89,11 @@ public class Product {
         this.shortDesc = shortDesc;
     }
 
-    public long getQuantity() {
+    public Long getQuantity() {
         return quantity;
     }
 
-    public void setQuantity(long quantity) {
+    public void setQuantity(Long quantity) {
         this.quantity = quantity;
     }
 
