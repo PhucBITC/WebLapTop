@@ -220,8 +220,7 @@
                                                             </div>
 
                                                             <div class="col-12">
-                                                                <label class="form-label">Mô tả chi tiết (Thông
-                                                                    số)</label>
+                                                                <label class="form-label">Mô tả chi tiết</label>
                                                                 <form:textarea rows="5"
                                                                     class="form-control ${not empty errorDetailDesc ? 'is-invalid' : ''}"
                                                                     path="detailDesc" />
@@ -229,7 +228,7 @@
                                                             </div>
 
                                                             <div class="col-12">
-                                                                <label class="form-label">Mô tả ngắn</label>
+                                                                <label class="form-label">Mô tả phần cứng</label>
                                                                 <form:input type="text"
                                                                     class="form-control ${not empty errorShortDesc ? 'is-invalid' : ''}"
                                                                     path="shortDesc" />

@@ -181,15 +181,15 @@
                                             </div>
 
                                             <div class="col-12">
-                                                <label class="form-label">Mô tả chi tiết</label>
-                                                <form:textarea rows="4" class="form-control ${not empty formErrors.getFieldValue('shortDesc') ? 'is-invalid' : ''}" path="shortDesc" placeholder="Nhập cấu hình chi tiết (CPU, RAM, SSD...)" />
-                                                <form:errors path="shortDesc" cssClass="invalid-feedback" />
+                                                <label class="form-label">Mô tả chi tiết </label>
+                                                <form:textarea rows="4" class="form-control ${not empty formErrors.getFieldValue('detailDesc') ? 'is-invalid' : ''}" path="detailDesc" placeholder="Những đặc điểm nổi bật" />
+                                                <form:errors path="detailDesc" cssClass="invalid-feedback" />
                                             </div>
 
                                             <div class="col-12">
-                                                <label class="form-label">Mô tả ngắn gọn</label>
-                                                <form:input type="text" class="form-control ${not empty formErrors.getFieldValue('detailDesc') ? 'is-invalid' : ''}" path="detailDesc" placeholder="Tóm tắt đặc điểm nổi bật" />
-                                                <form:errors path="detailDesc" cssClass="invalid-feedback" />
+                                                <label class="form-label">Mô tả phần cứng</label>
+                                                <form:input type="text" class="form-control ${not empty formErrors.getFieldValue('shortDesc') ? 'is-invalid' : ''}" path="shortDesc" placeholder="Nhập cấu hình chi tiết (CPU, RAM, SSD...)" />
+                                                <form:errors path="shortDesc" cssClass="invalid-feedback" />
                                             </div>
 
                                             <div class="col-md-4">
