@@ -166,6 +166,12 @@
                                     </div>
 
                                     <h2 class="delete-title">Xác nhận xóa người dùng?</h2>
+                                    <c:if test="${not empty error}">
+                                        <div class="alert alert-danger" role="alert">
+                                            ${error}
+                                        </div>
+                                    </c:if>
+
                                     <p class="delete-subtitle">
                                         Xóa vĩnh viễn tài khoản có mã
                                         <span class="user-id-badge">${deleteUser}</span>.

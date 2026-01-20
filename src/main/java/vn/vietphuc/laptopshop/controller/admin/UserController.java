@@ -119,8 +119,15 @@ public class UserController {
     // hiện tại thì bạn sử dụng cái này hay sử dụng @PostMapping vẫn được , nhưng
     // dùng reqestmaping ok hơn nhiều
     @PostMapping("/admin/user/update")
-    public String postUpdateUser(Model model, @ModelAttribute("newUser") User phucxo,
+    public String postUpdateUser(Model model, @ModelAttribute("newUser") @Valid User phucxo,
+            BindingResult newUserBindingResult,
             @RequestParam("phucvietFile") MultipartFile file) {
+
+        // validate
+        if (newUserBindingResult.hasErrors()) {
+            return "admin/user/update";
+        }
+
         User cureentUser = this.userSevice.getUserById(phucxo.getId());
 
         if (cureentUser != null) {
@@ -132,7 +139,7 @@ public class UserController {
             cureentUser.setAddress(phucxo.getAddress());
             cureentUser.setFullName(phucxo.getFullName());
             cureentUser.setPhone(phucxo.getPhone());
-             cureentUser.setEmail(phucxo.getEmail());
+            cureentUser.setEmail(phucxo.getEmail());
 
             if (phucxo.getRole() != null) {
                 cureentUser.setRole(this.userSevice.getRoleByName(phucxo.getRole().getName()));
@@ -155,7 +162,14 @@ public class UserController {
     @PostMapping("/admin/user/delete")
     // sử dụng kĩ thuật anotation , pathVariable
     public String postDeleteUser(Model model, @ModelAttribute("newUser") User phucxo) {
-        this.userSevice.deleteAUser(phucxo.getId());
+        try {
+            this.userSevice.deleteAUser(phucxo.getId());
+        } catch (Exception e) {
+            model.addAttribute("error",
+                    "Tài khoản này đang có dữ liệu liên quan (giỏ hàng, đơn hàng...) nên không thể xóa!");
+            model.addAttribute("deleteUser", phucxo.getId()); // Trả lại ID để hiển thị
+            return "admin/user/delete";
+        }
         return "redirect:/admin/user";
     }
 
