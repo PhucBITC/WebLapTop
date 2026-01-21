@@ -9,6 +9,7 @@
 		<relativePath/>
 		<!-- lookup parent from repository -->
 	</parent>
+	<packaging>war</packaging>
 	<groupId>vn.vietphucit</groupId>
 	<artifactId>laptopshop</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
