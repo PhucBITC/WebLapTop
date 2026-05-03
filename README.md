@@ -2,8 +2,6 @@
 
 A premium, full-stack E-commerce web application built with **Java Spring Boot**, focused on providing a seamless shopping experience for laptops with a high-end, modern administrative dashboard.
 
-![Dashboard Preview](https://via.placeholder.com/800x400?text=Laptop+Shop+Preview) *(Note: Replace with your actual project screenshot)*
-
 ## 🚀 Key Features
 
 ### 🛒 Client-Side
