@@ -133,7 +133,7 @@
                         </div>
                         <div class="contact-item">
                             <i class="fa fa-envelope"></i>
-                            <span>support@huycao.vn</span>
+                            <span>support@phucxo.vn</span>
                         </div>
                         <div class="mt-4">
                             <h6 class="text-white mb-3">Accepted Payments:</h6>

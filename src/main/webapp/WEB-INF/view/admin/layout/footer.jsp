@@ -59,7 +59,7 @@
     <div class="container-fluid px-4">
         <div class="d-flex align-items-center justify-content-between small">
             <div class="copyright-text">
-                Copyright &copy; <span class="brand-highlight">HUY CAO</span> 2026 
+                Copyright &copy; <span class="brand-highlight">Phuc Viet</span> 2026 
                 <span class="ms-2 d-none d-sm-inline">&middot; All rights reserved</span>
             </div>    
         </div>
